@@ -6,6 +6,14 @@ import (
 )
 
 func main() {
+
+	// TODO: add a bus that can read and write to devices mapped at different offsets
+	// TODO: Load nestest.nes cartridge and attach it to the bus
+	// Set PC to 0xc000 and try to knock off the first few instructions of nestest.log
+
+	// Hints: Skip the first 16 bytes of nestest.nes (this is header info not used yet)
+	//        Attach the cartridge at offset 0xc000 so that the first byte of program rom is read first
+
 	testProg := []byte{0x4A, 0xA2, 0x44, 0x99}
 
 	c := &cpu.Cpu{
