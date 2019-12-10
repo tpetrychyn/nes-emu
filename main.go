@@ -9,6 +9,10 @@ import (
 )
 
 func main() {
+	// TODO: Add instruction map and ReadInstruction func to get opcode and bytes
+	// TODO: Add cpu tick and move instruction handling to it
+	// TODO: Add address resolution function to cpu
+	// TODO: Add 2kb ram and attach it to bus at offset 0, mirror it every 0x07ff bytes
 	b := bus.NewBus()
 
 	cart := memory.NewCartridge("nestest.nes")
