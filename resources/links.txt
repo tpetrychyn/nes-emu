@@ -1,0 +1,8 @@
+Memory Map: https://wiki.nesdev.com/w/index.php/CPU_memory_map
+
+Status Registers: http://wiki.nesdev.com/w/index.php/Status_flags
+
+Youtube playlist: https://www.youtube.com/watch?v=nViZg02IMQo&list=PLrOv9FMX8xJHqMvSGB_9G9nZZ_4IgteYf
+
+Misc resources: http://6502.org/tutorials/
+
