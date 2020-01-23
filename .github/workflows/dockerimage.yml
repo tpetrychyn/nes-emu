@@ -6,9 +6,11 @@ jobs:
 
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
     - uses: actions/checkout@v1
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag petrycht/nes-emu:$(date +%s)
+      run: docker build . --file Dockerfile --tag petrycht/nes-emu:$(echo ${GITHUB_SHA} | cut -c1-8)
+    - name: Push the image
+      run: docker push petrycht/nes-emu:$(echo ${GITHUB_SHA} | cut -c1-8)
