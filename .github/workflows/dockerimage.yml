@@ -7,10 +7,12 @@ jobs:
   build:
 
     runs-on: self-hosted
+    env:
+      SHA8: ${GITHUB_SHA::8}
 
     steps:
     - uses: actions/checkout@v1
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag petrycht/nes-emu:$(date +%s)
+      run: docker build . --file Dockerfile --tag petrycht/nes-emu:$SHA8
     - name: Push the image
-      run: docker push petrycht/nes-emu:$(date +%s)
+      run: docker push petrycht/nes-emu:$SHA8
