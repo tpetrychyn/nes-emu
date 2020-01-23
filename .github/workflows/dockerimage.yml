@@ -12,3 +12,5 @@ jobs:
     - uses: actions/checkout@v1
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag petrycht/nes-emu:$(date +%s)
+    - name: Push the image
+      run: docker push petrycht/nes-emu:$(date +%s)
