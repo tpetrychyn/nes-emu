@@ -29,9 +29,9 @@ type Cpu struct {
 
 func (c *Cpu) setStatus(bit uint8, state bool) {
 	if state {
-		c.SR |= bit
+		c.SR |= bit // sets bit
 	} else {
-		c.SR &^= bit
+		c.SR &^= bit // clears bit
 	}
 }
 
