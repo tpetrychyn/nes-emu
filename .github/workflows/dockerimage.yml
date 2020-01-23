@@ -8,7 +8,7 @@ jobs:
 
     runs-on: self-hosted
     env:
-      SHA8: ${GITHUB_SHA::8}
+      SHA8: ${GITHUB_SHA:8}
 
     steps:
     - uses: actions/checkout@v1
